@@ -1,6 +1,6 @@
 #Midnight-Quicksand
 
-This is a fairly comprehensive proof of concept (PoC) for a malicious PowerShell script. It checks for various conditions like user privileges, keyboard input, network activity, virtual machine environment, and more to determine if it should run or not. Moreover, it shows clear signs of polymorphism and file infection capability. It should be noted that running scripts like this could cause significant harm to a system, violate user privacy, and likely break various laws.
+This is a fairly comprehensive proof of concept (PoC) for a malicious PowerShell script. It checks for various conditions like user privileges, keyboard input, network activity, virtual machine environment, and more to determine if it should run or not. Moreover, it shows clear signs of polymorphism and file infection capability, all the while establishing persistence and remaining ever-changing and unseen, hence the name. It should be noted that running scripts like this could cause significant harm to a system, violate user privacy, and likely break various laws.
 
 Here are the key aspects:
 This PowerShell script is intended to perform several checks for stealthy operation, perform obfuscation techniques, and run a payload under specific conditions. Here is a rough breakdown of its functionality:
