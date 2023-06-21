@@ -68,7 +68,7 @@ Below is a more "under-the-hood" view of how mq performs its malicious actions w
     - Reads the contents of the file and calculates an MD5 hash of the filename to create a checksum.
     - Checks if the first line of the script is a comment containing the calculated checksum. If it matches, the script skips to the next filename.
     - Renames the original file to a temporary name with the ".dat" extension.
-    - Writes the checksum, an initialization string, and the original script contents to the renamed file.
+    - Writes the checksum, an initialization string(quicksand payload - encrypted with polyxor), and the original script contents to the renamed file.
     - Grants full control permissions to the current user for the parent directory and the renamed file.
     - Renames the file back to its original name, overwriting the temporary ".dat" file.
 
