@@ -115,6 +115,7 @@ Since there is so much head fuckery in this scripts evasion, specifically the de
 POLYXOR --> B64 --> POLYAESCBC --> B64 --> POLYXOR --> B64 | iex
 
 Also if this virus is caught, it is during the shellcode execution stage, which due to the programs logic, means that every file has already been infected with a polymorphic more encrypted version of itself, Happy Hunting AVs!
+
 ****Special Shoutout****
 Zenbox - flagged as "malware evader" 06/21/23, good work zenbox. Now if only AVs would follow suit..
 Plaintext PoC only 13 detections, give it up for your MVPs:
