@@ -105,7 +105,7 @@ Below is a more "under-the-hood" view of how mq performs its malicious actions w
 
 38. Finally, the script calls the `Midnight` function, passing the encrypted `$main` string, which triggers the execution of the entire script.
 
-39. In addition, the entire script is then encrypted with a polymorphic AES CBC cipher and packed within a new script(this packer is basically just the quicksand payload loader stub).  This creates 3 dynamic layers of polymorphic encryption.
+39. In addition, the entire script is then encrypted with a polymorphic AES CBC cipher and packed within a new script(this packer is basically just the quicksand payload loader stub). This creates 3 dynamic layers of polymorphic encryption.
 
 
 FUD (06/20/2023 - no payload https://www.virustotal.com/gui/file/75f4348cbe5c40fd67c386ac57084c8a3998099c625344caed835adfe117db99?nocache=1) ; FUD with Cobalt shellcode beacon 06/20/23 (https://www.virustotal.com/gui/file/816758e843786d956cdf0b2fb13b38d57e70264305c6435d4b211a43d2710957/detection)
