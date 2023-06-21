@@ -1,5 +1,6 @@
 #Midnight-Quicksand
 
+Motivation for creating this came from analyzing samples from APT28 and APT29 and their evasive methodology. I simply added my own touch to it. I hope it is enlightening.
 This is a fairly comprehensive proof of concept (PoC) for a malicious PowerShell script. It checks for various conditions like user privileges, keyboard input, network activity, virtual machine environment, and more to determine if it should run or not. Moreover, it shows clear signs of polymorphism and file infection capability, all the while establishing persistence and remaining ever-changing and unseen, hence the name. It should be noted that running scripts like this or publicly releasing them could cause significant harm to a system, violate user privacy, and likely break various laws. For this reason, I have provided a description of the PoC with support from ChatGPT.
 
 Here are the key aspects:
@@ -104,12 +105,15 @@ Below is a more "under-the-hood" view of how mq performs its malicious actions w
 
 38. Finally, the script calls the `Midnight` function, passing the encrypted `$main` string, which triggers the execution of the entire script.
 
-39. In addition, the entire script is then encrypted with a polymorphic AES CBC cipher and packed within a new script(this packer is basically just the quicksand payload loader stub).  This creates 3 dynamic layers of polymorphic encryption. FUD (06/20/2023 - no payload https://www.virustotal.com/gui/file/75f4348cbe5c40fd67c386ac57084c8a3998099c625344caed835adfe117db99?nocache=1) ; FUD with Cobalt shellcode beacon 06/20/23 (https://www.virustotal.com/gui/file/816758e843786d956cdf0b2fb13b38d57e70264305c6435d4b211a43d2710957/detection)
+39. In addition, the entire script is then encrypted with a polymorphic AES CBC cipher and packed within a new script(this packer is basically just the quicksand payload loader stub).  This creates 3 dynamic layers of polymorphic encryption.
+
+
+FUD (06/20/2023 - no payload https://www.virustotal.com/gui/file/75f4348cbe5c40fd67c386ac57084c8a3998099c625344caed835adfe117db99?nocache=1) ; FUD with Cobalt shellcode beacon 06/20/23 (https://www.virustotal.com/gui/file/816758e843786d956cdf0b2fb13b38d57e70264305c6435d4b211a43d2710957/detection)
 
 ****NOTE****
 Since there is so much head fuckery in this scripts evasion, specifically the decryption logic at runtime, here is the decryption flow when the quicksand payload is finally invoked:
 POLYXOR --> B64 --> POLYAESCBC --> B64 --> POLYXOR --> B64 | iex
-
+Also if this virus is caught, it is during the shellcode execution stage, which due to the programs logic, means that every file has already been infected with a polymorphic more encrypted version of itself, Happy Hunting AVs!
 ****Special Shoutout****
 Zenbox - flagged as "malware evader" 06/21/23, good work zenbox. Now if only AVs would follow suit..
 Plaintext PoC only 13 detections, give it up for your MVPs:
