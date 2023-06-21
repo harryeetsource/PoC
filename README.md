@@ -135,3 +135,4 @@ ZoneAlarm
 *****
 These vendors as well lose their detection after the final layer of encryption
 FUD 06/21/23 https://www.virustotal.com/gui/file/b3ee4e8cf427712ed864e3499ec974165fd4cbea06b93226a5c565accd917b98/community
+THOR detected powershell loader, round of applause for THOR~
