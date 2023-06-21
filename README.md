@@ -92,7 +92,7 @@ Below is a more "under-the-hood" view of how mq performs its malicious actions w
 
 32. The script executes the downloaded psexec.exe file with the `-i -s powershell.exe -ExecutionPolicy Bypass -File $scriptPath` arguments using the `&` (call operator) and the path to psexec.exe.
 
-33. The script adds yet another C# code block, defining a class called "ShellCodeRunner." This class contains several P/Invoke declarations for various functions related to thread creation, thread context manipulation, and internal process module checks. The class also includes a `Run` method that performs several checks, including API hooking detection, unexpected module detection. Finally, if all checks are passed, shellcode is executed with SYSTEM privileges in a new suspended thread.
+33. The script adds yet another C# code block, defining a class called "ShellCodeRunner." This class contains several P/Invoke declarations for various functions related to thread creation, thread context manipulation, and internal process module checks. The class also includes a `Run` method that performs several checks, including API hooking detection, and unexpected module detection. Finally, if all checks are passed, shellcode is executed with SYSTEM privileges in a new suspended thread.
 
 34. The ShellCodeRunner "Run" method will check for unexpected modules and attempt to call Freelibrary on these modules, it will also check for hooks on the functions "CreateThread", "GetCurrentThread", "GetThreadContext", "SetThreadContext", and "ResumeThread", if no unexpected modules or hooks are found, the method proceeds to execute the shellcode.
 
