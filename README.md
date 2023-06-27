@@ -58,7 +58,7 @@
 
 27. **File System Permission Manipulation:** It also modifies the file system permissions for the script's directory and file, granting the current user FullControl permissions. This can potentially make it easier for the script to modify or create files in its directory.
 
-28. **Mutual Exclusion with `Monitor.Enter` and `Monitor.Exit`:** These are used to ensure that certain parts of the script do not run concurrently if multiple instances of the script are running. This could be used to prevent race conditions or other unintended behavior, however in this instance. It is used to further avoid AV and EDR monitoring DLLs
+28. **Mutual Exclusion with `Monitor.Enter` and `Monitor.Exit`:** These are used to ensure that certain parts of the script do not run concurrently if multiple instances of the script are running. This could be used to prevent race conditions or other unintended behavior, however in this instance, It is used to further avoid AV and EDR monitoring DLLs
 
 So in summary:
 The script includes a variety of advanced techniques to perform potentially harmful operations on a Windows system and evade detection.
