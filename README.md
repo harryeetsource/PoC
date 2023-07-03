@@ -69,8 +69,6 @@ It attempts to escalate its privileges, disable security features, manipulate fi
 
 It includes functionality to execute shellcode, which can be used to perform various types of malicious activity.
 
-It contains several anti-analysis measures, such as checks for debugging environments, virtual machines, and interactive user activity.
-
 The script infects other PowerShell scripts by adding its payload between specific comments, thus propagating its malicious behavior to other files.
 
 It creates a mutex to ensure only one instance of itself is running on a system at any given time.
