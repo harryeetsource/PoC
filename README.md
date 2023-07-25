@@ -1,5 +1,5 @@
 #Midnight-Quicksand FUD 07/03/2023 (https://www.virustotal.com/gui/file/89c8424799369da26860683464214fbdf8a88248f0bcd525f80996c16aa5c4c6?nocache=1) (JoeSandbox detection: https://www.joesandbox.com/analysis/1266259)
-
+FUD just with packer: https://www.virustotal.com/gui/file/ec549386430029395d75906f554572caacd7ac3f2a54a0168a2fe06dba382990/relations
 1. **XOR Cipher Function:** The `xorCipherBytes` and `xorCipher` functions are using XOR cipher, which is a simple encryption algorithm, to either encrypt or decrypt the input data. The key to this algorithm is the `$key` which is used to alter the input data.
 
 2. **Script Reading:** The script reads its own content using `Get-Content $MyInvocation.MyCommand.Path`.
